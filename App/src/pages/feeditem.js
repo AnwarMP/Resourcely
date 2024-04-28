@@ -1,5 +1,6 @@
+// src/components/FeedItem.js
 import React, { useState } from 'react';
-import '../styles/feeditem.css';
+import '../styles/feeditem.css'; // Make sure your CSS path is correct
 import newsIcon from '../assets/sirenIcon.png';
 import requestIcon from '../assets/requestIcon.jpeg';
 
@@ -11,14 +12,17 @@ const FeedItem = ({ type, title, content, imageUrl, username, timestamp, onFulfi
   };
 
   const handleFulfillClick = (e) => {
-    e.stopPropagation(); // Prevent the event from bubbling up to the parent element
-    onFulfillClick(); // Trigger action to open FulfillModal
+    e.stopPropagation(); // Stop the event from bubbling up to the parent
+    console.log(`Fulfill button clicked for request titled "${title}" with type "${type}"`);
+    if (onFulfillClick) {
+      onFulfillClick();
+    }
   };
 
   const icon = type === 'news' ? newsIcon : requestIcon;
 
   return (
-    <div className={`feed-item ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
+    <div className={`feed-item ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand} style={{ cursor: 'pointer' }}>
       <img src={icon} alt={title} className="feed-icon" />
       <div className="feed-content">
         <h3>{title}</h3>
@@ -30,8 +34,14 @@ const FeedItem = ({ type, title, content, imageUrl, username, timestamp, onFulfi
               <span className="username">{username}</span>
               <span className="timestamp">{timestamp}</span>
             </div>
-            {type === 'request' && ( // Only render the Fulfill button for request items
-              <button className="fulfill-button" onClick={handleFulfillClick}>Fulfill</button>
+            {type === 'request' && (
+              <button 
+                className="fulfill-button" 
+                onClick={handleFulfillClick} 
+                aria-label={`Fulfill request for ${title}`}
+              >
+                Fulfill
+              </button>
             )}
           </>
         )}

@@ -1,9 +1,8 @@
-// src/components/FeedMain.js
 import React from 'react';
 import FeedItem from './feeditem'; // Make sure to import FeedItem correctly
 import '../styles/feed.css';
 
-const FeedMain = ({ title, items, onFulfillClick }) => {  // Make sure to accept onFulfillClick as a prop
+const FeedMain = ({ title, items, onFulfillClick }) => {
   return (
     <div className="feed">
       <h2>{title}</h2>
@@ -13,11 +12,11 @@ const FeedMain = ({ title, items, onFulfillClick }) => {  // Make sure to accept
             key={item.id}
             type={item.type}
             title={item.title}
-            content={item.content}
+            content={item.description || item.content}
             imageUrl={item.imageUrl}
             username={item.username}
             timestamp={item.timestamp}
-            onFulfillClick={onFulfillClick}  // Pass the onFulfillClick to each FeedItem
+            onFulfillClick={onFulfillClick} // Correctly pass onFulfillClick to each FeedItem
           />
         ))}
       </div>
