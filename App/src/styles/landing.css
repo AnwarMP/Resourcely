@@ -1,10 +1,11 @@
 .landing {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;    /* Change to row to align children horizontally */
+    align-items: center;    /* Vertically center the children */
+    justify-content: center;/* Horizontally center the children */
     height: 100vh;
     background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;           /* Add some padding around the contents */
 }
 
 .login-form {
@@ -61,7 +62,7 @@
     background: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    width: 250px; 
+    width: 310px; 
     text-align: center;
 }
 
@@ -74,3 +75,15 @@
     color: #0056b3;
     text-decoration: none;
 }
+
+.login-image {
+    width: 300px;           /* Set the width to match the login form */
+    height: auto;           /* Automatically adjust the height to maintain the aspect ratio */
+    margin-right: 20px;     /* Keeps space between the image and the form container */
+}
+
+.forms-container {
+    display: flex;
+    flex-direction: column;
+}
+
