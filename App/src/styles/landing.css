@@ -137,3 +137,16 @@
     transform: translateY(-50%);
 }
 
+.home-button-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.home-link {
+    color: black; /* Black color for the Home link */
+    font-weight: bold; /* Makes the text bold */
+    text-decoration: none; /* Removes underline typical of links */
+}
+
