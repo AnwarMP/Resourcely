@@ -17,7 +17,7 @@
     text-align: left; /* Add text-align: left to align content to the left */
     padding: 20px; /* Keep the padding */
     left: 1%;
-    top: 50%;
+    top: 40%;
 }
 
 .text-heading, .text-subheading, .text-info {
@@ -149,4 +149,23 @@
     font-weight: bold; /* Makes the text bold */
     text-decoration: none; /* Removes underline typical of links */
 }
+
+.logo {
+    width: 100px; /* adjust the width as needed */
+    height: auto;
+    display: inline-block; /* or float: left */
+    margin-right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      width: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      width: 30px;
+    }
+  }
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import '../styles/landing.css'; // Ensure this file exists and styles your components as needed
+import Logo from '../assets/logofrontpage.png';
 
 function Landing() {
     const [email, setEmail] = useState('');
@@ -21,6 +22,7 @@ function Landing() {
     return (
         <div className="landing">
             <div className="content">
+                <img src={Logo} alt="Resourcely Logo" className="logo" />
                 <h1 className="text-heading">Resourcely,</h1>
                 <p className="text-subheading">Connecting communities in crisis</p>
                 <p className="text-info">We're Resourcely, an application that enables users to crowdsource and share critical resources such as food, water, shelter, and medical supplies during emergencies.</p>
