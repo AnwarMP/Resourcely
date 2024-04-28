@@ -1,14 +1,19 @@
 /* src/styles/FeedItem.css */
 .feed-item {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align children to the start of the container */
     cursor: pointer;
     border: 1px solid #e1e8ed;
     border-radius: 16px;
-    padding: 10px;
     margin: 10px 0;
     background-color: #fff;
     transition: all 0.3s ease;
+
+    padding-top: 1rem; /* Reduce the padding at the top */
+    padding-left: 10px; /* Adjust left padding as needed */
+    padding-right: 10px; /* Adjust right padding as needed */
+    padding-bottom: 10px; /* Adjust bottom padding as needed */
   }
   
   .feed-item.expanded {
@@ -17,9 +22,9 @@
   }
   
   .feed-item img.feed-icon {
-    width: 50px; /* Size as needed */
-    height: 50px; /* Size as needed */
-    margin-right: 10px;
+    width: 35px; /* Size as needed */
+    height: 35px; /* Size as needed */
+    margin-right: 0px;
   }
   
   .feed-item .feed-content h3 {
@@ -31,3 +36,36 @@
     margin: 5px 0 0;
   }
   
+  .feed-expanded-image {
+    width: 100%; /* Take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Spacing above the image */
+    border-radius: 8px; /* Rounded corners for the image */
+  }
+
+  .feed-content {
+    width: 100%; /* Take up the full width of the feed-item */
+  }
+    /* Add this new class for the header section */
+    .feed-header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+  .feed-item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; /* Add margin at the top of the user info */
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .username {
+    font-weight: bold; /* Make username bold */
+  }
+  
+  .timestamp {
+    color: #888; /* Timestamp can be a lighter color to indicate metadata */
+  }

@@ -1,17 +1,16 @@
 // src/components/FeedItem.js
 import React, { useState } from 'react';
 import '../styles/feeditem.css';
-import newsIcon from '../assets/newsUpdateIcon.jpeg'; // Your news icon
-import requestIcon from '../assets/requestIcon.jpeg'; // Your request icon
+import newsIcon from '../assets/sirenIcon.png';
+import requestIcon from '../assets/requestIcon.jpeg';
 
-const FeedItem = ({ type, title, content }) => {
+const FeedItem = ({ type, title, content, imageUrl, username, timestamp }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
 
-  // Determine the icon based on the type of feed item
   const icon = type === 'news' ? newsIcon : requestIcon;
 
   return (
@@ -19,7 +18,16 @@ const FeedItem = ({ type, title, content }) => {
       <img src={icon} alt={title} className="feed-icon" />
       <div className="feed-content">
         <h3>{title}</h3>
-        {isExpanded && <p>{content}</p>}
+        {isExpanded && (
+          <>
+            <p>{content}</p>
+            {imageUrl && <img src={imageUrl} alt="Detail" className="feed-expanded-image" />}
+            <div className="feed-item-info">
+              <span className="username">{username}</span>
+              <span className="timestamp">{timestamp}</span>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
