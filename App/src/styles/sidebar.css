@@ -79,3 +79,26 @@
   font-weight: bold; /* Example style for active link */
   /* You can also add other styles for active state here */
 }
+
+.logout-container {
+  padding: 10px;
+  margin-top: auto;
+  text-align: center; /* Center-align the logout button */
+  padding-bottom: 60px;
+}
+
+.logout-button {
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px; /* Rounded edges */
+  width: 100%; /* Full width of the container */
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #333;
+}
+
