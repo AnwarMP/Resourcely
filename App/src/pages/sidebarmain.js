@@ -6,6 +6,7 @@ const Sidebar = ({ onMenuItemClick, activeView }) => {
   return (
     <div className="sidebar">
       <h1>Resourcely</h1>
+      <button className="request-button" onClick={() => onMenuItemClick('new-request')}>Request</button>
       <ul>
       <li
           className={activeView === 'feed' ? 'active' : ''}
