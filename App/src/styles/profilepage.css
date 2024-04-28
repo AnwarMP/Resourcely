@@ -1,0 +1,49 @@
+/* src/styles/ProfilePage.css */
+
+.profile-page {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding-left: 250px; /* Adjust if you have a sidebar */
+    padding-right: 250px; /* Symmetrical padding to center the card */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    background-color: #f4f7f6; /* Your desired background color */
+  }
+  
+  .profile-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 50%; /* Or any width you prefer */
+    max-width: 600px; /* Optional: if you want a maximum width */
+    box-sizing: border-box;
+  }
+  
+  .profile-picture {
+    width: 150px; /* Increase size if you like */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+  
+  .bio, .info {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-page {
+      padding: 20px; /* Smaller padding for smaller screens */
+    }
+  
+    .profile-card {
+      width: 100%; /* Full width on smaller screens */
+      padding: 20px;
+    }
+  }
+  
