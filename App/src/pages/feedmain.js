@@ -1,9 +1,9 @@
 // src/components/FeedMain.js
 import React from 'react';
-import FeedItem from './feeditem'; // Make sure to import FeedItem
+import FeedItem from './feeditem'; // Make sure to import FeedItem correctly
 import '../styles/feed.css';
 
-const FeedMain = ({ title, items }) => {
+const FeedMain = ({ title, items, onFulfillClick }) => {  // Make sure to accept onFulfillClick as a prop
   return (
     <div className="feed">
       <h2>{title}</h2>
@@ -17,6 +17,7 @@ const FeedMain = ({ title, items }) => {
             imageUrl={item.imageUrl}
             username={item.username}
             timestamp={item.timestamp}
+            onFulfillClick={onFulfillClick}  // Pass the onFulfillClick to each FeedItem
           />
         ))}
       </div>
