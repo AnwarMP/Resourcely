@@ -1,0 +1,62 @@
+/* src/styles/RequestCard.css */
+.request-card {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align children to the start of the container */
+    cursor: pointer;
+    border: 1px solid #e1e8ed;
+    border-radius: 16px;
+    margin: 10px 0;
+    background-color: #fff;
+    transition: all 0.3s ease;
+
+    padding-top: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.request-card:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.request-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width utilization for spacing */
+    padding: 8px 0; /* Add some padding at the top and bottom */
+}
+
+/* Styling for action buttons */
+
+.action-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transitions for hover effects */
+    box-shadow: none; /* No shadow for a flat minimalist look */
+    font-weight: 600; /* Slightly bolder font */
+    text-transform: uppercase; /* All letters in uppercase for a clean look */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    letter-spacing: 0.05rem; /* Spacing out the letters for readability */
+}
+
+.accept-button {
+    background-color: #48a14d; /* Muted green background */
+    color: #ffffff;
+}
+
+.accept-button:hover, .accept-button:focus {
+    background-color: #3e8c43; /* Darken the color on hover/focus for feedback */
+}
+
+.reject-button {
+    background-color: #e57373; /* Soft red background */
+    color: #ffffff;
+}
+
+.reject-button:hover, .reject-button:focus {
+    background-color: #cf6666; /* Darken the color on hover/focus for feedback */
+}
+/* You can add more specific styling here as per your design requirements */

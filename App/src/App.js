@@ -1,12 +1,12 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Landing from './pages/landing';
+import Landing from './pages/landing'; // Ensure proper casing in import paths
 import Signup from './pages/signup';
 import HomePage from './pages/homepage';
 import ResourceMap from './pages/resourcemap';
-import SidebarLayout from './pages/sidebarlayout';
-import Requests from './pages/requests.js';
+import SidebarLayout from './pages/sidebarlayout'; // Adjust path if necessary
+import Requests from './pages/requests.js'; // Import the Requests component
+import OffersPage from './pages/offerpage'; // Import the OffersPage component
 import './App.css';
 
 function App() {
@@ -17,7 +17,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/map" element={<SidebarLayout><ResourceMap /></SidebarLayout>} />
-        <Route path="/requests" element={<SidebarLayout><Requests/></SidebarLayout>} />
+        <Route path="/requests" element={<SidebarLayout><Requests/></SidebarLayout>} /> // Added Requests route
+        <Route path="/offers" element={<SidebarLayout><OffersPage /></SidebarLayout>} /> // Added Offers route
         {/* Additional routes can be added here */}
       </Routes>
     </Router>
