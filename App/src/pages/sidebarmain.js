@@ -3,13 +3,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/sidebar.css';
 
-const SidebarMain = () => {
+const SidebarMain = ({  onMenuItemClick, activeView }) => {
   return (
     <div className="sidebar">
       <h1>Resourcely</h1>
-      <NavLink to="/new-request" className={({ isActive }) => isActive ? 'active request-button' : 'request-button'}>
-        Request
-      </NavLink>
+      <button className="request-button" onClick={() => onMenuItemClick('new-request')}>Request</button>
+
       <ul>
         <li>
           <NavLink to="/home" className={({ isActive }) => isActive ? 'active' : ''}>

@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/home" element={<SidebarLayout><HomePage /></SidebarLayout>} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/map" element={<SidebarLayout><ResourceMap /></SidebarLayout>} />
         {/* Additional routes can be added here */}
       </Routes>

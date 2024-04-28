@@ -51,6 +51,7 @@ const HomePage = () => {
 
   return (
     <div className="homePage">
+      <Sidebar onMenuItemClick={handleMenuItemClick} activeView={currentView} />
       <div className="feedContainer">
         <Feed title="Updates" items={mockUpdates} onFulfillClick={toggleFulfillModal} />
         <Feed title="Requests" items={requests} onFulfillClick={toggleFulfillModal} />
