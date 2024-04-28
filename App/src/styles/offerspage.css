@@ -1,0 +1,52 @@
+/* src/styles/OffersPage.css */
+.offers-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .offer-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e1e8ed; /* Add a bottom border to each row for separation */
+  }
+  
+  .offer-column, .request-column {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .request-column {
+    flex: 1;
+    margin: 0 10px;
+    max-height: 600px; /* Adjust the height as needed for your layout */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
+  
+  /* Added titles and their styling */
+  .column-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Added separator line */
+  .column-separator {
+    width: 1px;
+    background-color: #e1e8ed;
+    margin: 0 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .offer-row {
+      flex-direction: column;
+    }
+  
+    /* Remove separator line on smaller screens */
+    .column-separator {
+      display: none;
+    }
+  }
+  
