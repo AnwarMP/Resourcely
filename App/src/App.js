@@ -17,8 +17,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/map" element={<SidebarLayout><ResourceMap /></SidebarLayout>} />
-        <Route path="/requests" element={<SidebarLayout><Requests/></SidebarLayout>} /> // Added Requests route
-        <Route path="/offers" element={<SidebarLayout><OffersPage /></SidebarLayout>} /> // Added Offers route
+        <Route path="/requests" element={<SidebarLayout><Requests/></SidebarLayout>} /> 
+        <Route path="/offers" element={<SidebarLayout><OffersPage /></SidebarLayout>} /> 
         {/* Additional routes can be added here */}
       </Routes>
     </Router>
