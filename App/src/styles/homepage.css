@@ -1,10 +1,18 @@
-/* src/styles/HomePage.css */
+/* src/styles/homepage.css */
 .homePage {
     display: flex;
   }
   
   .feedContainer {
+    display: flex;
+    justify-content: space-around; /* This will space out your feeds evenly */
     flex-grow: 1;
     padding: 1rem;
+  }
+  
+  /* If you need to ensure that each feed does not grow beyond a certain size, you could add: */
+  .feed {
+    flex-basis: 45%; /* Adjust as needed, but make sure the sum of two feeds does not exceed 100% */
+    /* Other styling for the feed */
   }
   

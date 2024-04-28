@@ -7,7 +7,7 @@ import mockRequests from '../data/mockRequests';
 import '../styles/homepage.css';
 
 const HomePage = () => {
-  const [currentView, setCurrentView] = useState('updates'); // Default view
+  const [currentView, setCurrentView] = useState('feed'); // Default to 'feed'
 
   const handleMenuItemClick = (view) => {
     setCurrentView(view);
@@ -17,9 +17,13 @@ const HomePage = () => {
     <div className="homePage">
       <Sidebar onMenuItemClick={handleMenuItemClick} />
       <div className="feedContainer">
-        {currentView === 'updates' && <Feed title="Updates" items={mockUpdates} />}
-        {currentView === 'requests' && <Feed title="Requests" items={mockRequests} />}
-        {/* Add other views as needed */}
+        {currentView === 'feed' && (
+          <>
+            <Feed title="Updates" items={mockUpdates} />
+            <Feed title="Requests" items={mockRequests} />
+          </>
+        )}
+        {/* You can add other conditional renders for other views like 'offers' and 'profile' here */}
       </div>
     </div>
   );
