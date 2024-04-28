@@ -28,7 +28,7 @@ const RequestModal = ({ onClose, onSubmit }) => {
             <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
           </label>
           <div className="button-container">
-            <button type="button" className="close-button" onClick={onClose}>Cancel</button>
+            <button type="button" className="close-button" onClick={onClose}>Close</button>
             <button type="submit" className="submit-button">Submit Request</button>
           </div>
         </form>
