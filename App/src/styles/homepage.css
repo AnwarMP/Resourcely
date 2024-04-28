@@ -1,0 +1,10 @@
+/* src/styles/HomePage.css */
+.homePage {
+    display: flex;
+  }
+  
+  .feedContainer {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+  

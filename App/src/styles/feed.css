@@ -1,0 +1,23 @@
+/* src/styles/Feed.css */
+.feed {
+  padding: 1rem;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin-left: 220px; /* Adjust based on sidebar width */
+}
+
+.feed h2 {
+  margin-bottom: 1rem;
+}
+
+.feed-items {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.feed-item {
+  background-color: #bdc3c7;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
