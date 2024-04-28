@@ -1,11 +1,59 @@
 .landing {
     display: flex;
-    flex-direction: row;    /* Change to row to align children horizontally */
+    flex-direction: row;    /* Align children horizontally */
     align-items: center;    /* Vertically center the children */
     justify-content: center;/* Horizontally center the children */
     height: 100vh;
-    background-color: #f0f0f0; /* Light grey background */
+    background: linear-gradient(to right, #FBFCF8 60%, #013E38 40%); /* Cream for the first 60%, forest green for the remaining 40% */
     padding: 20px;           /* Add some padding around the contents */
+}
+
+.content {
+    position: absolute; /* Change from absolute to relative */
+    left: 0; /* Remove the left offset */
+    top: 0; /* Remove the top offset */
+    transform: none; /* Remove the transform */
+    width: 100%; /* Occupy the full width */
+    text-align: left; /* Add text-align: left to align content to the left */
+    padding: 20px; /* Keep the padding */
+    left: 1%;
+    top: 50%;
+}
+
+.text-heading, .text-subheading, .text-info {
+    margin: 10px 0; /* Spacing between text elements */
+}
+
+.text-heading {
+    font-size: 70px; /* Larger text for heading */
+    font-weight: 800;
+    color: #313638; /* Example color */
+}
+
+.text-subheading {
+    font-size: 40px; /* Medium size for subheading */
+    font-weight: 800;
+    color: #013E38; /* Example color */
+}
+
+.text-info {
+    font-size: 15px; /* Standard text size */
+    color: black; /* Default color */
+    overflow-wrap: break-word; /* Break the text into a new line when necessary */
+    max-width: 650px;
+}
+
+.top-right-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.signup-link {
+    color: white;
+    font-weight: bold; /* Makes the text bold */
+    text-decoration: none;
 }
 
 .login-form {
@@ -20,7 +68,7 @@
     width: 100%;
     text-align: center;
     padding: 20px 0; /* Increased padding */
-    font-size: 45px; /* Added font size */
+    font-size: 30px; /* Added font size */
 }
 
 .login-form div {
@@ -83,7 +131,9 @@
 }
 
 .forms-container {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: translateY(-50%);
 }
 

@@ -33,11 +33,19 @@ function Landing() {
 
     return (
         <div className="landing">
+            <div className="content">
+                <h1 className="text-heading">Resourcely,</h1>
+                <p className="text-subheading">Connecting communities in crisis</p>
+                <p className="text-info">We're Resourcely, an application that enables users to crowdsource and share critical resources such as food, water, shelter, and medical supplies during emergencies.</p>
+            </div>
+
+            <div className="top-right-corner">
+                <a href="/signup" className="signup-link">Sign up</a>
+            </div>
+
             <div className="forms-container">
                 <form onSubmit={handleSubmit} className="login-form">
-                    <div className="login-header">
-                        Resourcely
-                    </div>
+                    <div className="login-header">Login</div>
                     <div>
                         <label>Email:</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -46,12 +54,9 @@ function Landing() {
                         <label>Password:</label>
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     </div>
+                    {error && <p className="error-message">{error}</p>}  {/* Display error message */}
                     <button type="submit">Login</button>
                 </form>
-
-                <div className="signup-prompt">
-                    <p>Don't have an account? <a href="/signup">Sign up</a></p>
-                </div>
             </div>
         </div>
     );
