@@ -6,6 +6,7 @@ import Signup from './pages/signup';
 import HomePage from './pages/homepage';
 import ResourceMap from './pages/resourcemap';
 import SidebarLayout from './pages/sidebarlayout';
+import Requests from './pages/requests.js';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/map" element={<SidebarLayout><ResourceMap /></SidebarLayout>} />
+        <Route path="/requests" element={<SidebarLayout><Requests/></SidebarLayout>} />
         {/* Additional routes can be added here */}
       </Routes>
     </Router>
