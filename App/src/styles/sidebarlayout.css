@@ -1,0 +1,12 @@
+/* src/styles/sidebarlayout.css */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px; /* Adjust padding as needed */
+    overflow-y: auto; /* Adds scroll to the main content if needed */
+  }
+  

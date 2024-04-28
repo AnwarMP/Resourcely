@@ -1,21 +1,23 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Landing from './pages/landing'; 
+import Landing from './pages/landing';
 import Signup from './pages/signup';
 import HomePage from './pages/homepage';
-import './App.css'; // Keep the global styles if they are still needed
+import ResourceMap from './pages/resourcemap';
+import SidebarLayout from './pages/sidebarlayout';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Landing />} /> 
-          <Route path="/signup" element={<Signup />} /> 
-          <Route path="/homepage" element={<HomePage />} />
-          {/* Additional routes can be added here as you create more pages */}
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/home" element={<SidebarLayout><HomePage /></SidebarLayout>} />
+        <Route path="/map" element={<SidebarLayout><ResourceMap /></SidebarLayout>} />
+        {/* Additional routes can be added here */}
+      </Routes>
     </Router>
   );
 }

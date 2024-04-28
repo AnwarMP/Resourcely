@@ -52,4 +52,30 @@
 .request-button:hover {
   background-color: #45a049; /* Slightly darker green on hover */
 }
-  
+
+
+/* Assuming you have a class `sidebar` for your sidebar container */
+.sidebar a, .sidebar a:visited, .sidebar a:active {
+  color: white; /* Set text color to white */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.sidebar a:hover {
+  text-decoration: underline; /* Optional: if you want to underline on hover */
+}
+
+/* If you're using NavLink, you can directly target the class added by it */
+.sidebar .nav-link {
+  color: white; /* Set text color to white */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.sidebar .nav-link:hover {
+  text-decoration: underline; /* Optional: if you want to underline on hover */
+}
+
+/* If you're using active styling for NavLink */
+.sidebar .active {
+  font-weight: bold; /* Example style for active link */
+  /* You can also add other styles for active state here */
+}

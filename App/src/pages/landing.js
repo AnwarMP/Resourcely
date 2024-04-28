@@ -14,7 +14,7 @@ function Landing() {
     const handleSubmit = (event) => {
         event.preventDefault();
         // Assuming validation or other logic is handled elsewhere
-        navigate('/homepage'); // Navigate to the Feed page
+        navigate('/home'); // Navigate to the Feed page
     };
 
 
@@ -44,10 +44,6 @@ function Landing() {
                     {error && <p className="error-message">{error}</p>}  {/* Display error message */}
                     <button type="submit">Login</button>
                 </form>
-            </div>
-
-            <div className="home-button-container">
-                <a href="/" className="home-link">Home</a>
             </div>
         </div>
     );

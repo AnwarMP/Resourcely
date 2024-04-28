@@ -32,7 +32,6 @@ const HomePage = () => {
 
   return (
     <div className="homePage">
-      <Sidebar onMenuItemClick={handleMenuItemClick} activeView={currentView} />
       <div className="feedContainer">
         <Feed title="Updates" items={mockUpdates} />
         <Feed title="Requests" items={mockRequests} />
