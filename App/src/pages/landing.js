@@ -58,6 +58,10 @@ function Landing() {
                     <button type="submit">Login</button>
                 </form>
             </div>
+
+            <div className="home-button-container">
+                <a href="/" className="home-link">Home</a>
+            </div>
         </div>
     );
 }
