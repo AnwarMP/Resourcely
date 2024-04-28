@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import '../styles/landing.css'; // Ensure this file exists and styles your components as needed
 
 function Landing() {
@@ -6,30 +8,15 @@ function Landing() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleSubmit = async (event) => {
+    const navigate = useNavigate();
+
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-        
-        try {
-            const response = await fetch('/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password })
-            });
-
-            const result = await response.json();
-            if (!response.ok) {
-                throw new Error(result.message || 'Login failed');
-            }
-
-            console.log('Login successful');
-            setError(''); // Clear error if login is successful
-            // Handle successful login here (e.g., redirect or update state)
-        } catch (error) {
-            setError(error.message); // Display an error if the login fails
-        }
+        // Assuming validation or other logic is handled elsewhere
+        navigate('/homepage'); // Navigate to the Feed page
     };
+
 
     return (
         <div className="landing">

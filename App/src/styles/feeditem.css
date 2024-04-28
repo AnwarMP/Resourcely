@@ -1,0 +1,33 @@
+/* src/styles/FeedItem.css */
+.feed-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #e1e8ed;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .feed-item.expanded {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .feed-item img.feed-icon {
+    width: 50px; /* Size as needed */
+    height: 50px; /* Size as needed */
+    margin-right: 10px;
+  }
+  
+  .feed-item .feed-content h3 {
+    margin: 0;
+    font-size: 1.2em; /* Adjust as needed */
+  }
+  
+  .feed-item .feed-content p {
+    margin: 5px 0 0;
+  }
+  

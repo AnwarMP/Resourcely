@@ -1,0 +1,29 @@
+/* src/styles/Feed.css */
+.feed {
+  flex: 1; /* Makes the feed take up all available space */
+  padding: 1rem;
+  overflow-y: auto; /* Allows scrolling */
+}
+
+.feed h2 {
+  margin-bottom: 1rem;
+}
+
+.feed-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-item {
+  border: 1px solid #e1e8ed; /* Light grey border */
+  border-radius: 16px; /* Rounded corners like Twitter cards */
+  padding: 10px 15px; /* Some internal spacing */
+  margin: 10px 0; /* Space between cards */
+  background-color: #fff; /* White background */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: box-shadow 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.feed-item:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
