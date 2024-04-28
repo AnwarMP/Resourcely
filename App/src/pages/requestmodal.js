@@ -4,6 +4,7 @@ import '../styles/requestmodal.css'; // Ensure the path matches where the CSS fi
 
 const RequestModal = ({ onClose, onSubmit }) => {
   const [title, setTitle] = useState('');
+  const [location, setLocation] = useState(''); // Add state for location
   const [description, setDescription] = useState('');
 
   return (
@@ -12,11 +13,15 @@ const RequestModal = ({ onClose, onSubmit }) => {
         <h2>Submit a Request</h2>
         <form onSubmit={(e) => {
           e.preventDefault();
-          onSubmit({ title, description });
+          onSubmit({ title, location, description }); // Include location in the submission
         }}>
           <label>
             Title:
             <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
+          </label>
+          <label>
+            Location: {/* New Location input field */}
+            <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} required />
           </label>
           <label>
             Description:
