@@ -31,3 +31,8 @@
     margin: 5px 0 0;
   }
   
+  .feed-item .feed-expanded-image {
+    width: 100%; /* Full width of the card */
+    margin-top: 10px; /* Spacing above the image */
+    border-radius: 8px; /* Optional: if you want rounded corners on the image */
+  }

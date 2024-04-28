@@ -8,21 +8,18 @@ const Feed = ({ title, items }) => {
     <div className="feed">
       <h2>{title}</h2>
       <div className="feed-items">
-        {items.map((item, index) => {
-          // Assuming each item has a 'type' field
-          return (
-            <FeedItem
-              key={index}
-              type={item.type} // This should be 'news' or 'request'
-              title={item.title}
-              content={item.content}
-              // You can still pass the image prop if you have specific images for some items
-            />
-          );
-        })}
+        {items.map((item) => (
+          <FeedItem
+            key={item.id}
+            type={item.type}
+            title={item.title}
+            content={item.content}
+            imageUrl={item.imageUrl} // Pass the image URL to the FeedItem
+          />
+        ))}
       </div>
     </div>
   );
 };
-export default Feed;
 
+export default Feed;
