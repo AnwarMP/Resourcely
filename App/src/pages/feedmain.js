@@ -1,9 +1,9 @@
-// src/components/Feed.js
+// src/components/FeedMain.js
 import React from 'react';
+import FeedItem from './feeditem'; // Make sure to import FeedItem
 import '../styles/feed.css';
-import FeedItem from './feeditem';
 
-const Feed = ({ title, items }) => {
+const FeedMain = ({ title, items }) => {
   return (
     <div className="feed">
       <h2>{title}</h2>
@@ -14,7 +14,9 @@ const Feed = ({ title, items }) => {
             type={item.type}
             title={item.title}
             content={item.content}
-            imageUrl={item.imageUrl} // Pass the image URL to the FeedItem
+            imageUrl={item.imageUrl}
+            username={item.username}
+            timestamp={item.timestamp}
           />
         ))}
       </div>
@@ -22,4 +24,4 @@ const Feed = ({ title, items }) => {
   );
 };
 
-export default Feed;
+export default FeedMain;
