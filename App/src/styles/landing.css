@@ -1,10 +1,76 @@
 .landing {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* Full height of the viewport */
+    justify-content: center;
+    height: 100vh;
     background-color: #f0f0f0; /* Light grey background */
-    color: #333; /* Dark grey text */
-    font-family: Arial, sans-serif; /* Font style */
-  }
-  
+}
+
+.login-form {
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px; /* Specify width here */
+}
+
+.login-header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0; /* Increased padding */
+    font-size: 45px; /* Added font size */
+}
+
+.login-form div {
+    margin-bottom: 15px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Darker text color for better readability */
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3; /* Dark blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #003d82; /* Slightly darker blue on hover */
+}
+
+.signup-prompt {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 250px; 
+    text-align: center;
+}
+
+.signup-prompt p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.signup-prompt a {
+    color: #0056b3;
+    text-decoration: none;
+}
