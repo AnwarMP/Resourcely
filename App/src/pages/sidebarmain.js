@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../styles/sidebar.css';
+import logoImage from '../assets/resourcelylogo.png'; // Make sure the path is correct
+
 
 const SidebarMain = ({ onMenuItemClick, activeView }) => {
   const navigate = useNavigate();
@@ -12,6 +14,7 @@ const SidebarMain = ({ onMenuItemClick, activeView }) => {
 
   return (
     <div className="sidebar">
+      <img src={logoImage} alt="Resourcely Logo" className="sidebar-logo" />
       <h1>Resourcely</h1>
       <button className="request-button" onClick={() => onMenuItemClick('new-request')}>Request</button>
       <ul>
