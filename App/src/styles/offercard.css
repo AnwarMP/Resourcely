@@ -1,0 +1,30 @@
+/* src/styles/OfferCard.css */
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items for all children */
+    text-align: center; /* Center the text inside the card */
+    cursor: pointer;
+    border: 2px solid blue; /* Assuming 'blue' is a placeholder for an actual color value */
+    border-radius: 8px; /* Slight rounding of corners */
+    margin: 10px 0;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    padding: 20px; /* More padding for a spacious layout */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.offer-card h3 {
+    font-size: 2em; /* Much larger font size for item name */
+    font-weight: bold;
+    margin-bottom: 15px; /* Larger margin below the item name */
+    width: 100%; /* Make h3 take full width */
+    overflow-wrap: break-word; /* Ensure long words do not overflow */
+}
+
+.offer-card p {
+    width: 100%; /* Align paragraphs to the center by giving them full width */
+    margin: 5px 0; /* Uniform margin for all text elements */
+    font-size: 16px; /* Uniform font size for simplicity */
+    color: #333; /* Darker text for better readability */
+}
