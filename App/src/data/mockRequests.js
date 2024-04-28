@@ -5,12 +5,15 @@ const mockRequests = [
       type: 'request',
       title: 'Need Medical Supplies',
       content: 'Urgent request for medical supplies at Shelter A due to increasing patient numbers.',
+      timestamp: 'Oct 3, 10:45 AM'
     },
     {
       id: 2,
       type: 'request',
       title: 'Volunteers Required',
       content: 'Volunteers needed for community kitchen serving meals to the homeless.',
+      timestamp: 'Oct 3, 10:45 AM'
+      
     },
     // ...more requests (abbreviated)...
     { id: 3, type: 'request', title: 'Request 3', content: 'Details for request 3...' },
