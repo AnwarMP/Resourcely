@@ -28,3 +28,11 @@
     font-size: 16px; /* Uniform font size for simplicity */
     color: #333; /* Darker text for better readability */
 }
+
+.request-column {
+    flex: 1;
+    margin: 0 10px;
+    max-height: 600px; /* Adjust the height as needed for your layout */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
