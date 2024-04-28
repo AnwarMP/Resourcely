@@ -9,8 +9,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Landing />} /> // Correct usage of element for v6
-          <Route path="/signup" element={<Signup />} /> // Use element here instead of component
+          <Route path="/" element={<Landing />} /> 
+          <Route path="/signup" element={<Signup />} /> 
           {/* Additional routes can be added here as you create more pages */}
         </Routes>
       </div>
