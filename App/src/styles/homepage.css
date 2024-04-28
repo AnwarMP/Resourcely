@@ -21,3 +21,8 @@
   .feed:last-child {
     border-right: none; /* No border on the right for the last feed */
   }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.feed::-webkit-scrollbar {
+    display: none;
+  }
