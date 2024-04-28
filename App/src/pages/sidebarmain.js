@@ -1,14 +1,19 @@
-// src/components/SidebarMain.js
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../styles/sidebar.css';
 
-const SidebarMain = ({  onMenuItemClick, activeView }) => {
+const SidebarMain = ({ onMenuItemClick, activeView }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Assuming you handle logout logic here
+    navigate('/');
+  };
+
   return (
     <div className="sidebar">
       <h1>Resourcely</h1>
       <button className="request-button" onClick={() => onMenuItemClick('new-request')}>Request</button>
-
       <ul>
         <li>
           <NavLink to="/home" className={({ isActive }) => isActive ? 'active' : ''}>
@@ -36,6 +41,11 @@ const SidebarMain = ({  onMenuItemClick, activeView }) => {
           </NavLink>
         </li>
       </ul>
+      <div className="logout-container">
+        <button onClick={handleLogout} className="logout-button">
+          Logout
+        </button>
+      </div>
     </div>
   );
 };
