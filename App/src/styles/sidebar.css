@@ -25,4 +25,8 @@
   .sidebar li:hover {
     background-color: #3498db;
   }
+
+  .sidebar li.active {
+    background-color: #7f8c8d; /* Or any gray shade you prefer */
+  }
   

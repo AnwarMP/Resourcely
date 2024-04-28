@@ -13,17 +13,14 @@ const HomePage = () => {
     setCurrentView(view);
   };
 
+  
   return (
     <div className="homePage">
-      <Sidebar onMenuItemClick={handleMenuItemClick} />
+      <Sidebar onMenuItemClick={handleMenuItemClick} activeView={currentView} />
       <div className="feedContainer">
-        {currentView === 'feed' && (
-          <>
-            <Feed title="Updates" items={mockUpdates} />
-            <Feed title="Requests" items={mockRequests} />
-          </>
-        )}
-        {/* You can add other conditional renders for other views like 'offers' and 'profile' here */}
+        <Feed title="Updates" items={mockUpdates} />
+        <Feed title="Requests" items={mockRequests} />
+        {/* Remove the conditional rendering and always show both feeds */}
       </div>
     </div>
   );
